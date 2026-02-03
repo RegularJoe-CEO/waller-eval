@@ -24,7 +24,7 @@ Takes about 5 minutes. No input needed.
 
 ## What to watch
 
-The "Mem" column stays under 4GB even as sequence length passes 1 million tokens. The "Std" column shows what standard attention would require. When you see "1099 GB [IMPOSSIBLE]" — that's the point.
+The "Mem" column stays under 4GB even as sequence length passes 1 million tokens. The "Std" column shows what standard attention would require. When you see "1099 GB [IMPOSSIBLE]", that's the point.
 
 ## Contact
 

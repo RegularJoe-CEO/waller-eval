@@ -1,0 +1,56 @@
+=== WALLER OPERATOR MEMORY SCALING TEST ===
+
+Testing seq_len: 512
+---
+APA V1 512k x100 iters: 14.246 ms avg (493947.4 TFLOPS), memory O(N log N)
+APA V1 512k x100 iters: 14.246 ms avg (493947.4 TFLOPS), memory O(N log N)
+
+Testing seq_len: 1024
+---
+APA V1 512k x100 iters: 14.185 ms avg (496079.5 TFLOPS), memory O(N log N)
+APA V1 512k x100 iters: 14.185 ms avg (496079.5 TFLOPS), memory O(N log N)
+
+Testing seq_len: 2048
+---
+APA V1 512k x100 iters: 14.173 ms avg (496490.0 TFLOPS), memory O(N log N)
+APA V1 512k x100 iters: 14.173 ms avg (496490.0 TFLOPS), memory O(N log N)
+
+Testing seq_len: 4096
+---
+APA V1 512k x100 iters: 14.185 ms avg (496090.1 TFLOPS), memory O(N log N)
+APA V1 512k x100 iters: 14.185 ms avg (496090.1 TFLOPS), memory O(N log N)
+
+Testing seq_len: 8192
+---
+APA V1 512k x100 iters: 14.201 ms avg (495522.2 TFLOPS), memory O(N log N)
+APA V1 512k x100 iters: 14.201 ms avg (495522.2 TFLOPS), memory O(N log N)
+
+Testing seq_len: 16384
+---
+APA V1 512k x100 iters: 14.168 ms avg (496686.8 TFLOPS), memory O(N log N)
+APA V1 512k x100 iters: 14.168 ms avg (496686.8 TFLOPS), memory O(N log N)
+
+Testing seq_len: 32768
+---
+APA V1 512k x100 iters: 14.305 ms avg (491925.1 TFLOPS), memory O(N log N)
+APA V1 512k x100 iters: 14.305 ms avg (491925.1 TFLOPS), memory O(N log N)
+
+Testing seq_len: 65536
+---
+APA V1 512k x100 iters: 14.297 ms avg (492191.6 TFLOPS), memory O(N log N)
+APA V1 512k x100 iters: 14.297 ms avg (492191.6 TFLOPS), memory O(N log N)
+
+Testing seq_len: 131072
+---
+APA V1 512k x100 iters: 14.298 ms avg (492163.8 TFLOPS), memory O(N log N)
+APA V1 512k x100 iters: 14.298 ms avg (492163.8 TFLOPS), memory O(N log N)
+
+Testing seq_len: 262144
+---
+APA V1 512k x100 iters: 14.293 ms avg (492343.6 TFLOPS), memory O(N log N)
+APA V1 512k x100 iters: 14.293 ms avg (492343.6 TFLOPS), memory O(N log N)
+
+Testing seq_len: 524288
+---
+APA V1 512k x100 iters: 14.292 ms avg (492347.4 TFLOPS), memory O(N log N)
+APA V1 512k x100 iters: 14.292 ms avg (492347.4 TFLOPS), memory O(N log N)

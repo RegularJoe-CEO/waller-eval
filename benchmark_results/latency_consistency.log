@@ -1,0 +1,31 @@
+=== WALLER OPERATOR LATENCY CONSISTENCY TEST ===
+
+Testing latency at seq_len: 4096 (100 iterations)
+---
+APA V1 512k x100 iters: 14.274 ms avg (492981.6 TFLOPS), memory O(N log N)
+APA V1 512k x100 iters: 14.274 ms avg (492981.6 TFLOPS), memory O(N log N)
+
+Testing latency at seq_len: 8192 (100 iterations)
+---
+APA V1 512k x100 iters: 14.315 ms avg (491584.1 TFLOPS), memory O(N log N)
+APA V1 512k x100 iters: 14.315 ms avg (491584.1 TFLOPS), memory O(N log N)
+
+Testing latency at seq_len: 16384 (100 iterations)
+---
+APA V1 512k x100 iters: 14.315 ms avg (491574.2 TFLOPS), memory O(N log N)
+APA V1 512k x100 iters: 14.315 ms avg (491574.2 TFLOPS), memory O(N log N)
+
+Testing latency at seq_len: 32768 (100 iterations)
+---
+APA V1 512k x100 iters: 14.282 ms avg (492713.9 TFLOPS), memory O(N log N)
+APA V1 512k x100 iters: 14.282 ms avg (492713.9 TFLOPS), memory O(N log N)
+
+Testing latency at seq_len: 65536 (100 iterations)
+---
+APA V1 512k x100 iters: 14.296 ms avg (492224.6 TFLOPS), memory O(N log N)
+APA V1 512k x100 iters: 14.296 ms avg (492224.6 TFLOPS), memory O(N log N)
+
+Testing latency at seq_len: 131072 (100 iterations)
+---
+APA V1 512k x100 iters: 14.290 ms avg (492433.0 TFLOPS), memory O(N log N)
+APA V1 512k x100 iters: 14.290 ms avg (492433.0 TFLOPS), memory O(N log N)

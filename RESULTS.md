@@ -15,6 +15,25 @@ Benchmarks follow FlashAttention v2's official benchmark methodology. All tests 
 
 ## Results
 
+## Performance Comparison vs FlashAttention v2.8.3
+
+### Production Context Range (4K-32K tokens)
+
+| Sequence Length | FlashAttention | Waller Operator | Speedup |
+|-----------------|----------------|-----------------|---------|
+| 4,096           | 84.3 ms       | 14.2 ms        | 5.9x    |
+| 32,768          | 350.5 ms      | 14.3 ms        | **24.5x** |
+
+### Extended Context Range (65K-524K tokens)
+
+
+### Production Context Range (4K-32K tokens)
+
+| Sequence Length | FlashAttention | Waller Operator | Speedup |
+|-----------------|----------------|-----------------|---------||
+| 4,096           | 84.3 ms       | 14.2 ms        | 5.9x    |
+| 32,768          | 350.5 ms      | 14.3 ms        | **24.5x** |
+
 | Sequence Length | Flash2 Latency | O(N log N) Latency | Speedup | Flash2 Memory | O(N log N) Memory |
 |-----------------|----------------|--------------------|---------|---------------|-------------------|
 | 65,536          | 58.9ms        | 14.3ms            | 4.1x    | 1.29GB       | O(N log N)       |

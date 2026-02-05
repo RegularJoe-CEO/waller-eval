@@ -1,55 +1,54 @@
-# Waller Operator Evaluation Suite
+# Waller Operator v1.0 - Memory-Efficient Attention for LLM Inference
 
-High-performance attention mechanism benchmarking toolkit for CUDA-enabled GPUs.
+The Waller Operator eliminates O(N²) memory bottlenecks in transformer attention, achieving **O(N log N) memory** and **constant ~14ms latency** across 4K-2.6M token sequences on NVIDIA H100.
 
-## Latest Benchmark Results
+## 🚀 Quick Start
 
-**Hardware:** NVIDIA H100 80GB HBM3  
-**Configuration:** batch_size=1, num_heads=32, head_dim=128  
-**Date:** February 4, 2026
+Download `waller_eval_x86` and run:
 
-### Latency Scaling (512 → 524,288 tokens)
+```bash
+chmod +x waller_eval_x86
+./waller_eval_x86 --help
+```
 
-| Sequence Length | Latency (ms) | TFLOPS  | Variance |
-|-----------------|--------------|---------|----------|
-| 512             | 14.246       | 493,947 | -        |
-| 1,024           | 14.185       | 496,080 | 0.4%     |
-| 2,048           | 14.173       | 496,490 | 0.5%     |
-| 4,096           | 14.185       | 496,090 | 0.4%     |
-| 8,192           | 14.201       | 495,522 | 0.6%     |
-| 16,384          | 14.168       | 496,687 | 0.3%     |
-| 32,768          | 14.305       | 491,925 | 1.0%     |
-| 65,536          | 14.297       | 492,192 | 0.9%     |
-| 131,072         | 14.298       | 492,164 | 0.9%     |
-| 262,144         | 14.293       | 492,344 | 0.9%     |
-| 524,288         | 14.292       | 492,347 | 0.9%     |
+**Adjust CLI parameters** for custom sequence lengths, batch sizes, head dimensions, and more:
 
-**Overall latency variance:** 0.96% across 1000x sequence length increase
+```bash
+./waller_eval_x86 --seq_len 131072 --batch_size 1 --num_heads 32 --head_dim 128
+```
 
-### Performance vs FlashAttention v2.8.3
+**Requirements:**
+- NVIDIA H100 GPU (sm_90) or A100 (sm_80)
+- CUDA 12.8
+- x86_64 Linux
 
-| Sequence Length | FlashAttention | Waller Operator | Speedup |
-|-----------------|----------------|-----------------|---------|
-| 4,096           | 84.3 ms        | 14.2 ms         | 5.9x    |
-| 32,768          | 350.5 ms       | 14.3 ms         | 24.5x   |
-| 65,536+         | OOM            | 14.3 ms         | ∞       |
+## 📊 Benchmark Results
 
-**Key Findings:**
-- Constant ~14ms latency regardless of sequence length
-- O(N log N) memory complexity vs O(N²)
-- Zero throughput degradation vs FlashAttention's 76% loss (4K→32K)
-- Sustained ~492-496 TFLOPS across all sequence lengths
+See full results at: `waller-eval/RESULTS.md`
 
-## Technical Details
+**Key Performance:**
+- **Memory:** O(N log N) vs O(N²) standard attention
+- **Latency:** ~14ms constant across 4K-2.6M tokens
+- **Equivalence:** Mathematically identical to standard softmax attention
+- **No retraining required**
 
-**Architecture:** Warp-level streaming aggregation with double-buffering  
-**Memory:** O(N log N) complexity, no attention matrix materialization  
-**Target:** sm_90 (H100), CUDA 12.8  
+## 🔬 Technical Details
 
-## Integration
+- Built: Feb 2026
+- Platform: x86_64 Linux
+- CUDA Compute: sm_80 (A100), sm_90 (H100)
+- Size: 0.97 MB
 
-vLLM benchmarks: https://github.com/RegularJoe-CEO/vllm/tree/waller-operator-integration
+## 📜 Patent & Licensing
 
-## Patent Status
+**Patent Pending:** US Provisional Application filed Feb 2026  
+**Title:** Memory-Efficient Attention Computation System and Method
 
-Provisional patent filed February 3, 2026 (Foley & Lardner LLP)
+**Licensing inquiries:** eric@wallerlabs.com
+
+## 🏢 Waller Labs
+
+Breakthrough IP in AI inference, energy efficiency, and materials science.
+
+**Contact:** e@ewaller.com  
+**Web:** luxiedge.com 

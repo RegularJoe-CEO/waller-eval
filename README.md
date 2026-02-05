@@ -44,9 +44,9 @@ See full results at: `waller-eval/RESULTS.md`
 **Patent Pending:** US Provisional Application filed Feb 2026  
 **Title:** Memory-Efficient Attention Computation System and Method
 
-**Licensing inquiries:** eric@wallerlabs.com
+**Licensing inquiries:** e@ewaller.com
 
-## 🏢 Waller Labs
+## 🏢 Waller Systems 
 
 Breakthrough IP in AI inference, energy efficiency, and materials science.
 

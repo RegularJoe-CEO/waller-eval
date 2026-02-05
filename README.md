@@ -1,6 +1,6 @@
 # Waller Operator - Evaluation Binary
 
-Self-running demo proving O(1) memory attention at extreme sequence lengths.
+Self-running demo proving O(N log N) pyramid attention at extreme sequence lengths.
 
 ## Requirements
 

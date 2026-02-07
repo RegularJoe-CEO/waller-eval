@@ -1,3 +1,5 @@
+# UPDATE: THIS REPO WILL BE ARCHIVED> THE UPDATED REPO CAN BE FOUND AT https://github.com/RegularJoe-CEO/Geodesic-Attention-Engine-GAE-
+
 # Waller Operator v1.0 - Memory-Efficient Attention for LLM Inference
 
 The Waller Operator eliminates O(N²) memory bottlenecks in transformer attention, achieving **O(N log N) memory** and **constant ~14ms latency** across 4K-2.6M token sequences on NVIDIA H100.
